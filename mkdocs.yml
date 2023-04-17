@@ -29,6 +29,7 @@ theme:
 plugins:
   - git-authors
   - git-committers:
+      enabled: !ENV [CI, true]
       repository: Octo-IA/Material-Conhecimento
       branch: main
 
@@ -42,3 +43,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Octo-IA 
+
+# Page tree
+nav:
+  - Boas-Vindas: index.md
+  - Material:
+    - material/introducao.md
