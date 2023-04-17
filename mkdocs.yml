@@ -27,9 +27,9 @@ theme:
 
 # Plugins
 plugins:
-  - git-authors
+  - git-revision-date-localized:
+      enable_creation_date: true
   - git-committers:
-      enabled: !ENV [CI, true]
       repository: Octo-IA/Material-Conhecimento
       branch: main
 
