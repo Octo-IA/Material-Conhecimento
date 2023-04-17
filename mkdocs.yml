@@ -27,6 +27,7 @@ theme:
 
 # Plugins
 plugins:
+  - git-authors
   - git-committers:
       repository: Octo-IA/Material-Conhecimento
       branch: main
