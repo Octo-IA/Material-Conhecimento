@@ -4,6 +4,9 @@ site_name: Material de ensino Octo IA
 repo_name: Octo-IA/Material-Conhecimento
 repo_url: https://github.com/Octo-IA/Material-Conhecimento
 
+# Copyright
+copyright: Copyright &copy; 2016 - 2023 Martin Donath
+
 theme:
   name: 'material'
   features:
@@ -27,9 +30,11 @@ theme:
 
 # Plugins
 plugins:
+  - search
   - git-revision-date-localized:
       enable_creation_date: true
   - git-committers:
+      enabled: true
       repository: Octo-IA/Material-Conhecimento
       branch: main
 
@@ -39,7 +44,21 @@ extra:
     json: [.s2]
   analytics:
     provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+    property: G-SBN9GMV4K1
+    feedback:
+      title: Esta página foi útil?
+      ratings:
+        - icon: material/heart
+          name: Esta página foi útil
+          data: 1
+          note: >-
+            Obrigado pelo seu feedback!
+        - icon: material/heart-broken
+          name: Esta página pode ser melhorada
+          data: 0
+          note: >-
+            Obrigado pelo seu feedback! Ajude-nos a melhorar esta página usando nosso 
+            . <a href="https://forms.gle/v9UpZznvjUm56Ykv9" target="_blank" rel="noopener">formulário de feedback</a>.
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Octo-IA 
