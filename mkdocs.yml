@@ -9,6 +9,7 @@ copyright: Copyright &copy; 2016 - 2023 Martin Donath
 
 theme:
   name: 'material'
+  favicon: assets/logo/logo.png 
   logo: assets/logo/logo.png
   features:
     - navigation.tabs
