@@ -9,6 +9,7 @@ copyright: Copyright &copy; 2016 - 2023 Martin Donath
 
 theme:
   name: 'material'
+  logo: assets/logo/logo.png
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -65,6 +66,6 @@ extra:
 
 # Page tree
 nav:
-  - Boas-Vindas: index.md
-  - Material:
+  - 🧠 Material:
     - material/introducao.md
+  - 🎯 Nosso Propósito: index.md
