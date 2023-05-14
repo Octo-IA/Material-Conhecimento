@@ -67,6 +67,7 @@ extra:
 
 # Page tree
 nav:
-  - 🧠 Material:
-    - material/introducao.md
+  - 🧠 Redes Neurais - CNNs:
+    - material/redes-cnns/Introducao.md 
+    - material/redes-cnns/Conceitos_fundamentais_redes_neurais.md
   - 🎯 Nosso Propósito: index.md
