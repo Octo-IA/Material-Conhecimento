@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Introducao/">
+        <link rel="prev" href="../Conceitos_fundamentais_redes_neurais/">
       
       
-        <link rel="next" href="../Etapas_de_uma_CNN/">
+        <link rel="next" href="../../..">
       
       <link rel="icon" href="../../../assets/logo/logo.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Conceitos fundamentais redes neurais - Material de ensino Octo IA</title>
+        <title>Etapas de uma CNN - Material de ensino Octo IA</title>
       
     
     
@@ -82,6 +82,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#etapas-de-uma-cnn" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -112,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Conceitos fundamentais redes neurais
+              Etapas de uma CNN
             
           </span>
         </div>
@@ -331,19 +336,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Conceitos_fundamentais_redes_neurais/" class="md-nav__link">
         Conceitos fundamentais redes neurais
       </a>
-      
     </li>
   
 
@@ -353,11 +350,86 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Etapas_de_uma_CNN/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Etapas de uma CNN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Etapas de uma CNN
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-camada-de-convolucao" class="md-nav__link">
+    A camada de Convolução
+  </a>
+  
+    <nav class="md-nav" aria-label="A camada de Convolução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-camada-relu" class="md-nav__link">
+    A camada Relu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-camada-pooling" class="md-nav__link">
+    A camada Pooling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-camada-flatten" class="md-nav__link">
+    A camada Flatten
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camada-totalmente-conectada-fc" class="md-nav__link">
+    Camada totalmente conectada (FC)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -401,6 +473,57 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-camada-de-convolucao" class="md-nav__link">
+    A camada de Convolução
+  </a>
+  
+    <nav class="md-nav" aria-label="A camada de Convolução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-camada-relu" class="md-nav__link">
+    A camada Relu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-camada-pooling" class="md-nav__link">
+    A camada Pooling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-camada-flatten" class="md-nav__link">
+    A camada Flatten
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camada-totalmente-conectada-fc" class="md-nav__link">
+    Camada totalmente conectada (FC)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -418,20 +541,59 @@
   
 
 
-  <h1>Conceitos fundamentais redes neurais</h1>
+<h1 id="etapas-de-uma-cnn">Etapas de uma CNN</h1>
+<p>Uma rede neural convolucional (CNN) possui diversas camadas e nesse capítulo vamos detalhar cada um deles. No capítulo seguinte você irá ver as operações matemáticas que ocorrem em cada uma destas etapas. </p>
+<p>Como exemplo, aqui vamos descrever as camadas de uma CNN chamada de <strong>Lenet5</strong> que contêm as seguintes camadas: <strong>camada convolucional, camada pooling, camada convolucional 2, camada pooling 2 e 3 camadas totalmente conectadas.</strong> A figura 2.1 mostra a arquitetura da LeNet5.</p>
+<p align='center'> 
+<img src='https://github.com/Octo-IA/Material-Conhecimento/blob/main/docs/material/redes-cnns/imagens/etapas_cnns/arquitetura_LeNet5.jpg?raw=true'>
+</p>
 
+<p>IFigura 2.1: Arquitetura da LeNet5</p>
+<p>A Figura 2.2 mostra a análise das dimensões presentes, bem como parâmetros utilizados na convolução e pooling da LeNet5. Note que também há as funções de ativação utilizadas na saída de cada uma das suas respectivas camadas. Logo em seguida há uma descrição dos volumes de saída em cada uma das camadas. </p>
+<p align='center'>
+<img src='https://github.com/Octo-IA/Material-Conhecimento/blob/main/docs/material/redes-cnns/imagens/etapas_cnns/leNet_Structure.png?raw=true'>
+</p>
 
+<p>Figura 2.2: Parâmetros da arquitetura LeNet5</p>
+<ul>
+<li>INPUT [32x32x1] manterá os valores brutos de pixel da imagem, neste caso uma imagem de largura 32, altura 32 e com 1 canal de cor.</li>
+<li>A camada CONV1 calculará a saída dos neurônios que estão conectados a regiões locais na entrada, cada um calculando um produto escalar entre seus pesos e uma pequena região à qual estão conectados no volume de entrada. Isso pode resultar em um volume como [28x28x6] se decidirmos usar 6 filtros.</li>
+<li>A camada POOL1 aplicará uma função de ativação elemento a elemento na saída da convolução, e isso deixa o tamanho do volume inalterado ([14x14x6]).</li>
+<li>A segunda camada CONV2 resultará em um volume como [10x10x16] se decidirmos usar 16 filtros.</li>
+<li>A camada POOL2 executará uma operação de redução da resolução ao longo das dimensões espaciais (largura, altura), resultando em um volume como [5x5x16].</li>
+<li>A terceira camada CONV3 terá como foco fazer uma operação que chamamos de <strong>Flatten</strong>, que consistem em transformar um volume em uma camada totalmente conectada. Nessa etapa isso resultará em um volume como [1x1x120].</li>
+<li>A primeira camada totalmente conectada (FC) será responsável por mapear 84 features em tons de cinza.</li>
+<li>A camada de saída é totalmente conectada (FC) que contêm 10 neurônios que irão classificar 10 objetos através da função de ativação softmax.</li>
+</ul>
+<p>Conforme pode-se analisar, além dos volumes de saída em cada camada de uma CNN, há a necessidade em se descrever os seguintes parâmetros do <strong>tamanho do kernel, stride e pading,</strong> para que assim se possa avaliar o tamanho dos volumes de entrada e saída em cada uma das respectivas camadas. Fique tranquilo que nesse livro abordaremos cada uma dessas etapas e você também aprenderá a calculas as dimensões de cada uma dessas camadas. </p>
+<p>Outro ponto importante que pode-se analisar na Figura 2.2 é a quantidade de parâmetros necessários em cada uma das camadas. Por exemplo na camada CONV 1 precisa somente de 156 parâmetros, enquanto a camda totalmente conectada precisa de 10.164 parâmetros. Isso demonstra a alta capacidade das CNNs processarem a análise de imagens requerindo um menor poder computacional, bem como menor tempo para disponibilização da resposta. A seguir, vamos ver os detalhes de cada uma das camadas de uma CNN. </p>
+<h2 id="a-camada-de-convolucao"><strong>A camada de Convolução</strong></h2>
+<p>Na camada de convolução, um conjunto de filtros ou kernels é aplicado a uma janela deslizante (também chamada de "patch") que percorre toda a entrada da camada. Cada filtro é uma matriz de pesos que é multiplicada pelos valores na janela para produzir uma única saída. O processo de aplicar um filtro a uma janela é conhecido como operação de convolução.</p>
+<h3 id="a-camada-relu"><em>A camada Relu</em></h3>
+<p>A camada Relu é uma camada usada em redes neurais convolucionais (CNNs) que é usada para introduzir não-linearidade nas saídas das camadas convolucionais. </p>
+<p>A camada Relu é importante porque as camadas convolucionais produzem saídas lineares, o que significa que a rede neural convolucional como um todo seria uma função linear se não houvesse camadas não-lineares como a camada Relu. A introdução de não-linearidade nas saídas das camadas convolucionais permite que a rede neural convolucional modele relacionamentos mais complexos entre as entradas e as saídas.</p>
+<h3 id="a-camada-pooling"><em>A camada Pooling</em></h3>
+<p>A camada de pooling é usada para reduzir o tamanho dos volumes de entrada. Essa camada é geralmente usada após as camadas convolucionais e antes das camadas totalmente conectadas.</p>
+<p>A camada de pooling funciona aplicando uma função de agregação em regiões locais do volume de entrada. A função de agregação mais comum é o máximo, o que significa que o valor máximo em cada região local é mantido e o restante é descartado. Outras funções de agregação incluem a média e a soma.</p>
+<p>A camada de pooling é importante porque ela ajuda a reduzir o tamanho dos volumes de entrada, o que pode reduzir o tempo de treinamento da CNN e tornar a rede mais eficiente em termos de memória. A camada de pooling também pode ajudar a tornar a rede mais robusta à variação nas posições das características na entrada.</p>
+<h3 id="a-camada-flatten"><em>A camada Flatten</em></h3>
+<p>A camada Flatten é uma camada usada em redes neurais convolucionais (CNNs) para converter uma matriz multidimensional em um vetor unidimensional. Essa camada é geralmente usada após as camadas convolucionais e de pooling e antes das camadas totalmente conectadas.</p>
+<p>A camada Flatten é importante porque as camadas totalmente conectadas requerem um vetor unidimensional como entrada. As camadas convolucionais e de pooling produzem saídas multidimensionais, então a camada Flatten é usada para "achatar" essas saídas em um vetor unidimensional que pode ser usado como entrada para as camadas totalmente conectadas.</p>
+<h3 id="camada-totalmente-conectada-fc"><em>Camada totalmente conectada (FC)</em></h3>
+<p>Enquanto as camadas de convolução são responsáveis por extrair características das entradas, as camadas totalmente conectadas são responsáveis por produzir uma saída final a partir dessas características. A camada totalmente conectada geralmente é colocada no final da rede e é composta por neurônios conectados a todas as saídas da camada anterior.</p>
+<p>FORWARD E BACKWARD em Redes Neurais</p>
+<p><a href="https://www.notion.so/Fun-o-de-Ativa-o-b9f2b56735c34c00bee2e3c1e7e351fc?pvs=21">Função de Ativação</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 2, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 14, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 2, 2023</span>
       
     
   </small>
