@@ -70,4 +70,5 @@ nav:
   - 🧠 Redes Neurais - CNNs:
     - material/redes-cnns/Introducao.md 
     - material/redes-cnns/Conceitos_fundamentais_redes_neurais.md
+    - material/redes-cnns/Etapas_de_uma_CNN.md
   - 🎯 Nosso Propósito: index.md
